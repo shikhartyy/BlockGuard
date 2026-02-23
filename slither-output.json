@@ -1,0 +1,276 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 48,
+              "length": 65,
+              "filename_relative": "test.sol",
+              "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+              "filename_short": "test.sol",
+              "is_dependency": false,
+              "lines": [
+                4,
+                5,
+                6
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Test",
+                "source_mapping": {
+                  "start": 27,
+                  "length": 89,
+                  "filename_relative": "test.sol",
+                  "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+                  "filename_short": "test.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.call()",
+            "source_mapping": {
+              "start": 86,
+              "length": 19,
+              "filename_relative": "test.sol",
+              "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+              "filename_short": "test.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 9,
+              "ending_column": 28
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 48,
+                  "length": 65,
+                  "filename_relative": "test.sol",
+                  "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+                  "filename_short": "test.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    4,
+                    5,
+                    6
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Test",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 89,
+                      "filename_relative": "test.sol",
+                      "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+                      "filename_short": "test.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Test.withdraw() (test.sol#4-6) ignores return value by msg.sender.call() (test.sol#5)\n",
+        "markdown": "[Test.withdraw()](test.sol#L4-L6) ignores return value by [msg.sender.call()](test.sol#L5)\n",
+        "first_markdown_element": "test.sol#L4-L6",
+        "id": "b97555bda4f1ec7d8087bfca945e191811c70e5aa21ea3764117e4c256bafc05",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.8.0",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "test.sol",
+              "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+              "filename_short": "test.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 24
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.8",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess\n\t- AbiReencodingHeadOverflowWithStaticArrayCleanup\n\t- DirtyBytesArrayToStorage\n\t- DataLocationChangeInInternalOverride\n\t- NestedCalldataArrayAbiReencodingSizeValidation\n\t- SignedImmutables\n\t- ABIDecodeTwoDimensionalArrayMemory\n\t- KeccakCaching.\nIt is used by:\n\t- ^0.8.0 (test.sol#1)\n",
+        "markdown": "Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess\n\t- AbiReencodingHeadOverflowWithStaticArrayCleanup\n\t- DirtyBytesArrayToStorage\n\t- DataLocationChangeInInternalOverride\n\t- NestedCalldataArrayAbiReencodingSizeValidation\n\t- SignedImmutables\n\t- ABIDecodeTwoDimensionalArrayMemory\n\t- KeccakCaching.\nIt is used by:\n\t- [^0.8.0](test.sol#L1)\n",
+        "first_markdown_element": "test.sol#L1",
+        "id": "3caa34dd15bd87c6f56613caa3c17c729454b09c0fa6fd71b698dd509a89633c",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 48,
+              "length": 65,
+              "filename_relative": "test.sol",
+              "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+              "filename_short": "test.sol",
+              "is_dependency": false,
+              "lines": [
+                4,
+                5,
+                6
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Test",
+                "source_mapping": {
+                  "start": 27,
+                  "length": 89,
+                  "filename_relative": "test.sol",
+                  "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+                  "filename_short": "test.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.call()",
+            "source_mapping": {
+              "start": 86,
+              "length": 19,
+              "filename_relative": "test.sol",
+              "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+              "filename_short": "test.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 9,
+              "ending_column": 28
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 48,
+                  "length": 65,
+                  "filename_relative": "test.sol",
+                  "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+                  "filename_short": "test.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    4,
+                    5,
+                    6
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Test",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 89,
+                      "filename_relative": "test.sol",
+                      "filename_absolute": "D:/Blockguar/BlockGuard/backend/test.sol",
+                      "filename_short": "test.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Test.withdraw() (test.sol#4-6):\n\t- msg.sender.call() (test.sol#5)\n",
+        "markdown": "Low level call in [Test.withdraw()](test.sol#L4-L6):\n\t- [msg.sender.call()](test.sol#L5)\n",
+        "first_markdown_element": "test.sol#L4-L6",
+        "id": "3abb53b18355f7a40b638c166c819e3af07e334d0f652bbd81c10ba6bc40056d",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}
